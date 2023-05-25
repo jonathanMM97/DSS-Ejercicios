@@ -1,10 +1,5 @@
 # Ejercicios DSS
 
-<center>
-
-  ![**Autor: Jonathan Muñoz Morales**](Imagenes/uca.png)
-
-
-
-</center>
-
+<p align="center">
+<img src="http://some_place.com/image.png" />
+</p>
