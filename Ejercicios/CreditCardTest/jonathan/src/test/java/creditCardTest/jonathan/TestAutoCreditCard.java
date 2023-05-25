@@ -84,4 +84,39 @@ class TestAutoCreditCard {
 		}
 	}
 
+	@Test
+	public void testGet()
+	{
+		LocalDate expirationDate = LocalDate.of(2023,06,07);
+		CreditCard c = new CreditCard("1234567890123456", "John Doe", expirationDate, 123, 5000.0);//Si compila perfectamente pasa el test.
+		
+		assertEquals(c.getCardNumber(), "1234567890123456");
+		assertEquals(c.getCardHolderName(), "John Doe");
+		assertEquals(c.getExpirationDate(), LocalDate.of(2023,06,07));
+		assertEquals(c.getCvv(), 123);
+		assertEquals(c.getCreditLimit(), 5000.0);
+	}
+
+	@Test
+	public void testSet()
+	{
+		LocalDate expirationDate = LocalDate.of(2023,9,07);
+		CreditCard c = new CreditCard("0004567890123456", "Jonathan", expirationDate, 789, 1000.0);//Si compila perfectamente pasa el test.
+		
+		c.setCardNumber("1234567890123456");
+		assertEquals(c.getCardNumber(), "1234567890123456");
+
+		c.setCardHolderName("John Doe");
+		assertEquals(c.getCardHolderName(), "John Doe");
+
+		c.setExpirationDate(LocalDate.of(2023,06,07));
+		assertEquals(c.getExpirationDate(), LocalDate.of(2023,06,07));
+
+		c.setCvv(123);
+		assertEquals(c.getCvv(), 123);
+
+		c.setCreditLimit(5000.0);
+		assertEquals(c.getCreditLimit(), 5000.0);
+	}
+
 }
