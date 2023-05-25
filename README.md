@@ -2,7 +2,7 @@
 
 <center>
 
-  ![**Autor: Jonathan Muñoz Morales**](imagenes/uca.png)
+  ![**Autor: Jonathan Muñoz Morales**](Imagenes/uca.png)
 
 
 
