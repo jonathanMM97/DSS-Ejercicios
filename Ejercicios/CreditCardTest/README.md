@@ -103,3 +103,18 @@ Por otro lado es la siguiente:
 
 Una vez creado los [test](/Ejercicios/CreditCardTest/jonathan/src/test/java/creditCardTest/jonathan/TestAutoCreditCard.java) podemos compilar el código para comprobar que efectivamente pasa todos los test.
 
+## Como compilar(Si cambia algún nombre de directorio, debe saber que este tutorial puede fallar)
+
+Para compilar el proyecto, debe situarse en el directorio llamado `jonathan`, una vez situado en el, debe introducir el siguiente comando:
+
+```
+    mvn clean install
+```
+
+Con esto, se harán todos los test implementados en el proyecto. Le mostrará un mensaje como el siguiente:
+
+<p align="center">
+<img src="creditCardOutput.png" alt="JuveYell" width="3000px" >
+</p>
+
+Como se puede observar en la imágen anterior, nos indica que se han ejecutado correctamente **5 tests**.
