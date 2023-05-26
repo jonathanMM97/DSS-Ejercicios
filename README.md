@@ -11,5 +11,5 @@ Este repositorio tendrá alojado varias tareas de la asignatura DSS, cada una de
 A continuación le dejo los enlaces a dichas tareas:
 
 - [CreditCardTest](/Ejercicios/CreditCardTest/)
-- [Inyección de dependencias](/Ejercicios/Inyeccion/)
+- [Inyección de dependencias](/Ejercicios/InyeccionDependencias/)
 - [Patrones](/Ejercicios/Patrones/)
