@@ -1,4 +1,4 @@
-package main.java.inyeccionDependencias.KnightsOfTheRoundTable.core;
+package inyeccionDependencias.KnightsOfTheRoundTable.core;
 
 public interface Knight {
     States embarkOnQuest();
