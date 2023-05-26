@@ -12,4 +12,4 @@ A continuación le dejo los enlaces a dichas tareas:
 
 - [CreditCardTest](/Ejercicios/CreditCardTest/)
 - [Inyección de dependencias](/Ejercicios/InyeccionDependencias/)
-- [Patrones](/Ejercicios/Patrones/)
+- [Patrones](/Ejercicios/Distribuidora/)
