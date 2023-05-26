@@ -98,13 +98,13 @@ A continuación mostraremos como quedaría el diseño:
 
 ```mermaid
 classDiagram
-Form : display()
 Form <|-- BaseForm : implements
 Form <|-- FormDecorator : implements
-FormDecorator : Form decoratedForm
 FormDecorator <|-- ScrollbarDecorator : implements
 FormDecorator <|-- BorderDecorator : implements
 ScrollbarDecorator : addScrollbar()
+Form : display()
+FormDecorator : Form decoratedForm
 BorderDecorator : String borderColor
 BorderDecorator : int borderThickness
 BorderDecorator : addBorder()
