@@ -81,3 +81,31 @@ sequenceDiagram
     GenerateOrderAlmacen-->>Sistema: enviado
     Sistema-->>Pantalla: Orden realizada correctamente.
 ```
+
+Como podemos ver en el diagrama de secuencia, el sistema dependiendo del formulario llamará al generador de orden correspondiente, en este ejemplo llama al generador de orden de almacén porque no existe otro implementado, pero en el sistema real los habrá y será el sitema el encargado de distribuir el formulario.
+
+
+### Patrón para los formularios
+
+Hemos elegido el patrón `Decorador` el cuál se basa en añadir nueva funcionad sin modificar el objeto, para este caso, se usará la interfaz `Form` que es común para todos los formularios. De ella se crea una clase base concreta `BaseForm`, es decir, esta clase implementa *Form*. Además de la clase anterior, creamos una clase abstracta `Formdecorator` que implemente la interfaz y actúe como base para los decoradores. 
+
+Con esto obtenemos la flexibilidad de añadir tantos decoradores como queramos:
+
+- Decorador para la barra de desplazamiento `ScrollbarDecorator`
+- Decorador para el resaltado con bordes `BorderDecorator`
+
+A continuación mostraremos como quedaría el diseño:
+
+```mermaid
+classDiagram
+Form : display()
+Form <|-- BaseForm : implements
+Form <|-- FormDecorator : implements
+FormDecorator : Form decoratedForm
+FormDecorator <|-- ScrollbarDecorator : implements
+FormDecorator <|-- BorderDecorator : implements
+ScrollbarDecorator : addScrollbar()
+BorderDecorator : String borderColor
+BorderDecorator : int borderThickness
+BorderDecorator : addBorder()
+```
