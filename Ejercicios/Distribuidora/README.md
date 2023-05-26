@@ -71,9 +71,13 @@ Por último para saber como se realiza una petición mostraremos el ejemplo en j
 sequenceDiagram
     participant Pantalla
     participant Sistema
+    participant GenerateOrderAlmacen
     participant Almacen
     Pantalla->>Sistema: receiveForm()
-    Sistema-->>Sistema: processForm(Form form)
-    Sistema->>Almacen: sendOrder(order)
+    Sistema->>GenerateOrderAlmacen: command = GenerateOrderAlmacen(almacen, form)
+    Sistema->>GenerateOrderAlmacen: execute()
+    GenerateOrderAlmacen-->>GenerateOrderAlmacen: processForm(Form form)
+    GenerateOrderAlmacen->>Almacen: sendOrder(order)
+    GenerateOrderAlmacen-->>Sistema: enviado
     Sistema-->>Pantalla: Orden realizada correctamente.
 ```
